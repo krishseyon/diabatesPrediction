@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='d.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Predict Diabetes</span></h2>
+           
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST" autocomplete="off">
+                <input class="form-input" type="number" name="pregnancies" placeholder="Number of Pregnancies eg. 2" maxlength="2" min="0" required><br>
+                <input class="form-input" type="number" name="glucose" placeholder="Glucose (mg/dL) eg. 80" min="0" required><br>
+                <input class="form-input" type="number" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 90" min="0" required><br>
+                <input class="form-input" type="number" name="skinthickness" placeholder="Skin  (mm) eg. 10" min="0" required><br>
+                <input class="form-input" type="number" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80" min="0" required><br>
+                <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 22.2" min="0" required><br>
+                <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.44" min="0" required><br>
+                <input class="form-input" type="number" name="age" placeholder="Age (years) eg. 44" min="0" required><br>
+		<input class="form-input" type="text" name="skin" placeholder="Thickness (mm) eg. 2.16" min="0" required><br>
+
+        		<input type="submit" class="my-cta-button" value="PREDICT">
+        	</form>
+    	</div>
+
+       
+
+    </body>
+</html>
+
